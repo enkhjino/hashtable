@@ -1,10 +1,14 @@
-import "./styles.css";
+//first hash function
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+function hash(key, arrayLen) {
+  let total = 0;
+  for (let char of key) {
+    let value = char.charCodeAt(0) - 96;
+    total = (total + value) % arrayLen;
+  }
+  return total;
+}
+
+console.log(hash("pink", 10));
+// console.log(hash("blue", 10))
+// console.log(hash("yellow", 10))

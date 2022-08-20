@@ -64,4 +64,22 @@ class HashTable {
     }
     return valuesArr;
   }
+  keys() {
+    let keysArr = [];
+    //loop through length of keyMap
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i]) {
+        for (let j = 0; j < this.keyMap[i].length; j++) {
+          if (!keysArr.includes(this.keyMap[i][j][0])) {
+            keysArr.push(this.keyMap[i][j][0]);
+          }
+        }
+      }
+      //check if i exists
+      //loop through keymap[i][j]
+      //if keymap[i][j] doesnt exist, push to valuesArr
+      //return valuesArr
+    }
+    return keysArr;
+  }
 }

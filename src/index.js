@@ -34,4 +34,16 @@ class HashTable {
     }
     this.keyMap[index].push([key, value]);
   }
+  get(key) {
+    let index = this._hash(key);
+    if (this.keyMap[index]) {
+      //forloop to check if exact same key exists, then return key, value pair
+      for (var i = 0; i < this.keyMap[index].length; i++) {
+        if (key === this.keyMap[index][i][0]) {
+          return this.keyMap[index][i];
+        }
+      }
+    }
+    return undefined;
+  }
 }

@@ -27,4 +27,11 @@ class HashTable {
     }
     return total;
   }
+  set(key, value) {
+    let index = this._hash(key);
+    if (!this.keyMap[index]) {
+      this.keyMap[index] = [];
+    }
+    this.keyMap[index].push([key, value]);
+  }
 }

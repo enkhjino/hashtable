@@ -83,3 +83,15 @@ class HashTable {
     return keysArr;
   }
 }
+
+let a = new HashTable();
+// let b = new HashTable();
+a.set("hello", "world");
+a.set("ello", "orld");
+a.set("llo", "rld");
+a.set("lo", "ld");
+a.set("o", "d");
+a.set("o", "d");
+a.set("o", "d");
+
+console.log(a.keys());

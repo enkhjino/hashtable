@@ -12,3 +12,8 @@ function hash(key, arrayLen) {
 console.log(hash("pink", 10));
 // console.log(hash("blue", 10))
 // console.log(hash("yellow", 10))
+
+class HashTable {
+  constructor(size=53){
+    this.keyMap = new Array(size);
+  }
